@@ -8,10 +8,15 @@ form.addEventListener("submit", function (event) {
 
   if (task) {
     const li = document.createElement("li");
-    li.textContent = newTask;
+    li.textContent = task;
 
     list.appendChild(li);
 
     input.value = "";
   }
 });
+const completed = function (j) {
+  let eleList = j.target;
+  eleList.classList.toggle("completed");
+};
+document.querySelector("ul").addEventListener("click", completed);
