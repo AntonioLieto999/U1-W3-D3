@@ -2,8 +2,8 @@ const form = document.querySelector("form");
 const input = document.getElementById("input");
 const list = document.getElementById("list");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
   const task = input.value;
 
   if (task) {
